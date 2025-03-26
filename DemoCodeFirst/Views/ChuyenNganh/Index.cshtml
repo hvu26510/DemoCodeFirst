@@ -1,0 +1,31 @@
+﻿@model IEnumerable<DemoCodeFirst.Models.ChuyenNganh>
+@{
+
+}
+
+<h1> This is a Razor View </h1>
+<table>
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.idChuyenNganh)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TenNganh)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var m in Model)
+        {
+            <tr>
+                <th>
+                    @Html.DisplayFor( Model => m.idChuyenNganh)
+                </th>
+                <th>
+                    @Html.DisplayFor(Model => m.TenNganh)
+                </th>
+            </tr>
+        }
+    </tbody>
+</table>
